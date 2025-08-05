@@ -6,8 +6,8 @@ import { Logo } from "../components/Logo/Logo";
 
 export default function Home() {
   return (
-    <View style={styles.container}>
-      <View>
+    <View style={styles.appContainer}>
+      <View style={styles.logoContainer}>
         <Logo></Logo>
       </View>
       <Text>Open up App.tsx to start working on your app!</Text>
