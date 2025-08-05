@@ -3,6 +3,7 @@ import React from "react";
 import { View, Text} from "react-native";
 import styles from "../screens/Styles"
 import { Logo } from "../components/Logo/Logo";
+import { BTextInput } from "../components/TextInput/BTextInput";
 
 export default function Home() {
   return (
@@ -10,8 +11,12 @@ export default function Home() {
       <View style={styles.logoContainer}>
         <Logo></Logo>
       </View>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+
+      <View style={styles.inputContainer}>
+        <BTextInput></BTextInput>
+      </View>
+      
+      <StatusBar style="light" />
     </View>
   )
 }
