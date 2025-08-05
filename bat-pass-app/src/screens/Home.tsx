@@ -16,7 +16,6 @@ export default function Home() {
       <View style={styles.inputContainer}>
         <BButton/>
       </View>
-      
       <StatusBar style="light" />
     </View>
   )
