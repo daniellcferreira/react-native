@@ -4,6 +4,7 @@ import { View, Text} from "react-native";
 import styles from "../screens/Styles"
 import { Logo } from "../components/Logo/Logo";
 import { BTextInput } from "../components/TextInput/BTextInput";
+import { BButton } from "../components/Button/BButton";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       </View>
 
       <View style={styles.inputContainer}>
-        <BTextInput></BTextInput>
+        <BButton/>
       </View>
       
       <StatusBar style="light" />
