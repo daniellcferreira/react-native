@@ -13,10 +13,15 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text onPress={() => console.log("inline")}>Inline</Text>
+      {/* <Text onPress={() => console.log("inline")}>Inline</Text>
       <Text onPress={handleHelloWorld}>Handler Function</Text>
       <Text onPress={() => handlePress(1)}>Handler Function With Parameters</Text>
-      <Text onPress={helloExample}>Imported Function</Text>
+      <Text onPress={helloExample}>Imported Function</Text> */}
+
+      <Text 
+        style={{fontSize: 32}} 
+        onPress={() => console.log("pressionado!")}
+        onPressIn={() => console.log("press in acionado!")}>Componente principal</Text>
       <StatusBar style="auto" />
     </View>
   );
