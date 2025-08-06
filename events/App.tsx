@@ -21,7 +21,9 @@ export default function App() {
       <Text 
         style={{fontSize: 32}} 
         onPress={() => console.log("pressionado!")}
-        onPressIn={() => console.log("press in acionado!")}>Componente principal</Text>
+        onPressIn={() => console.log("press in acionado!")}
+        onPressOut={() => console.log("press out acionado!")}
+        >Componente principal</Text>
       <StatusBar style="auto" />
     </View>
   );
