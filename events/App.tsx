@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
 import { helloExample } from './src/actions';
 
 export default function App() {
@@ -18,14 +18,20 @@ export default function App() {
       <Text onPress={() => handlePress(1)}>Handler Function With Parameters</Text>
       <Text onPress={helloExample}>Imported Function</Text> */}
 
-      <Text 
+      {/* <Text 
         style={{fontSize: 32}} 
         onPress={() => console.log("pressionado!")}
         onPressIn={() => console.log("press in acionado!")}
         onPressOut={() => console.log("press out acionado!")}
         onLongPress={() => console.log("long press acionado!")}
         onTextLayout={() => console.log("text layout acionado!")}
-        >Componente principal</Text>
+        >Componente principal</Text> */}
+
+      <TextInput style={{fontSize: 32}} 
+        placeholder='exemplo'
+        onChange={() => console.log("onChange executado!")}
+        onChangeText={() => console.log("onChangeText acionado!")}
+        onFocus={() => console.log("usuario focou nesse componente")}></TextInput>
       <StatusBar style="auto" />
     </View>
   );
