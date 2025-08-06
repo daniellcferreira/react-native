@@ -24,6 +24,7 @@ export default function App() {
         onPressIn={() => console.log("press in acionado!")}
         onPressOut={() => console.log("press out acionado!")}
         onLongPress={() => console.log("long press acionado!")}
+        onTextLayout={() => console.log("text layout acionado!")}
         >Componente principal</Text>
       <StatusBar style="auto" />
     </View>
