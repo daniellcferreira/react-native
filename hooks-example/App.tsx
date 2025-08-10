@@ -1,11 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default function App() {
+  const [count, setCount] = useState(0);
+
+  const incrementCount = () => {
+    setCount(prevCount => prevCount + 1);
+  }
+
+  const decrementCount = () => {
+    if (count > 0) {
+      setCount(prevCount => prevCount - 1);
+    }
+  }
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.big}>{count}</Text>
+
+      <View style={styles.inline}>
+        <Button title='REMOVER' onPress={decrementCount}></Button>
+        <Button title='ADICIONAR' onPress={incrementCount}></Button>
+      </View>
     </View>
   );
 }
@@ -17,4 +33,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  big: {
+    fontSize: 40
+  },
+  inline: {
+    width: '50%',
+    flexDirection: 'row',
+    justifyContent: 'center',
+  }
 });
