@@ -1,8 +1,16 @@
-import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, View, Button, Alert } from 'react-native';
 
 export default function App() {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (count === 0) {
+      Alert.alert('Contador', 'O contador está zerado!');
+    } else {
+      console.log('ainda tem valores no contador');
+    }
+  },[count]);
 
   const incrementCount = () => {
     setCount(prevCount => prevCount + 1);
