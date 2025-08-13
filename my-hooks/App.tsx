@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
@@ -6,6 +6,10 @@ export default function App() {
   const [quantity, setQuantity] = useState<number>(1);
   const [price, setPrice] = useState<number>(10.9);
   const initialPrice = 10.9;
+
+  useEffect(() => {
+    alert('Quantity updated');
+  }, [quantity]);
 
   const increment = () => {
     setQuantity((prevQuantity) => {
