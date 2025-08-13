@@ -1,9 +1,17 @@
 import { View, Text } from "react-native";
+import { RouteProp } from "@react-navigation/native";
+import { RootStackParamList } from "../../App";
 
-export default function UserScreen() {
+type UserScreenProps = {
+  route: RouteProp<RootStackParamList, 'User'>
+}
+
+export default function UserScreen({ route }: UserScreenProps) {
+  const { userName } = route.params;
+
   return(
     <View>
-      <Text>Home Screen</Text>
+      <Text>Bem vindo {userName}!!!</Text>
     </View>
   ) 
 }
