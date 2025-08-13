@@ -20,7 +20,7 @@ Além disso, o projeto contém telas simples (`HomeScreen` e `GalleryScreen`) pa
 
 ---
 
-## ✨ Funcionalidades  
+## Funcionalidades  
 - Criação de navegação **Stack**  
 - Navegação com **Bottom Tabs** e ícones personalizados  
 - Navegação via **Drawer**  
