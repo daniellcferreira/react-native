@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './src/screens/HomeScreen';
 import UserScreen from './src/screens/UserScreen';
+import UserContextProvider from './src/contexts/userContext';
 
 export type RootStackParamList = {
   Home: undefined;
@@ -15,11 +16,12 @@ const Stack = createStackNavigator<RootStackParamList>();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="User" component={UserScreen} />
-      </Stack.Navigator>
-      <StatusBar style="auto" />
+      <UserContextProvider>
+        <Stack.Navigator initialRouteName="Home">
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="User" component={UserScreen} />
+        </Stack.Navigator>
+      </UserContextProvider>
     </NavigationContainer>
   );
 }
